@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration</title>
+
+    <style>
+        form{
+	width: 700px;
+	border: 2px solid #000;
+	padding-left: 70px;
+	padding-right: px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-right: 650px;
+	background-image: bg;
+	border-radius: 30px;
+}
+    </style>
+
+	<script type="text/javascript">
+		function validate(){
+			var firstname = document.getElementById("firstname");
+			var lastname = document.getElementById("lastname");
+			var phoneno = document.getElementById("telephonenumber");
+			var email = document.getElementById("email");
+
+            var address = document.getElementById("address");
+			var city = document.getElementById("city");
+			var password = document.getElementById("password");
+			var conpassword = document.getElementById("confirmpassword");
+
+			var Namepattern = /^\w{8,12}$/;
+			var userNamepattern = /^[a-zA-Z0-9\_\.-]{8,10]$/;
+			var coursepattern = /[I][C][T]$/;
+			var phonepattern = /[0][7][0-2.4-8][0-9]{7}$/;
+			var emailpattern = /([a-zA-Z0-9\.\_-])+@([A-Za-z0-9])+.([a-z]{1,3})$/;
+			var passwordpattern = /^[a-zA-Z0-9\@\_\.\#\-\^\%\*]{8,15}$/;
+
+			if(!firstname.value.match(Namepattern)){
+				 alert("Invalid firstname!!!");
+				firstname.style.color = "red";
+				x = document.getElementById("error");
+				x.innerHTML = "Name not valid";
+				firstname.style.border = "2px solid red";
+				x.style.color = "red"
+				return false;
+			}
+
+			if(!lastname.value.match(Namepattern)){
+				x= document.getElementById("error1");
+				x.InnerHTML = "Last Name not valid";
+				x.style.color = "red";
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+    <h1>Registration</h1><br><br>
+	<form action="" method="" onsubmit="return validate()">
+		<label for="firstname">First Name : </label>
+		<input type="text" name="firstname" id="firstname" placeholder="First Name" required>&nbsp;<span id="error"></span>
+        <br><br>
+
+		<label for="lastname">Last Name : </label>&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" name="lastname" id="lastname" placeholder="Last Name" required><span id=error1></span>
+		<br><br>
+
+		<label for="dob">DOB : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="date" name="dob" id="dob" placeholder="DOB" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br><br>
+
+		<label for="telephonenumber">Telephone No : </label>
+		<input type="text" name="telephonenumber" id="telephonenumber" placeholder="Telephone Number" required>
+		<br><br>
+
+        <label for="address">Address: </label>&nbsp;
+		<input type="text" name="address" id="address" placeholder="Address" required>&nbsp;
+        <br><br>
+
+		<label for="city">City : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" name="city" id="city" placeholder="City" required>
+		<br><br>
+
+		<label for="email">Email : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" name="email" id="email" placeholder="Email" required>&nbsp;
+        <br><br>
+
+		<label for="password">Password : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="password" name="password" id="password" placeholder="Password" required>
+		<br><br>
+
+		<label for="confirmpassword">Confirm Password : </label>
+		<input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required>
+        <br><br>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="Submit" name="Close" id="close" value="Close">
+		<input type="Submit" name="Submit" id="submit" value="Submit">
+	</form>
+</body>
+</html>

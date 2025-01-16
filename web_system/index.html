@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty of Technology</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">Faculty of Technology</div>
+
+  <!-- Menu Bar -->
+  <ul class="menu-bar">
+    <li><a href="home">Home</a></li>
+    <li>
+      <a href="departments">Departments</a>
+      <ul class="submenu">
+        <li><a href="ict">ICT</a></li>
+        <li><a href="bst">BST</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="academic">Academic</a>
+      <ul class="submenu">
+        <li><a href="staffs">Staffs</a></li>
+        <li><a href="students">Students</a></li>
+      </ul>
+    </li>
+    <li><a href="non-academic">Non-Academic</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Register</a></li>
+  </ul>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="image1.jpg" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="image2.jpg" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="image3.jpg" alt="Image 3">
+    </div>
+  </div>
+
+  <!-- Three-Part Window -->
+  <div class="three-part-container">
+    <div class="part">
+      <img src="ICT.jpg" alt="BICT">
+      <p>Welcome to the Department of ICT. Explore innovative technology and research opportunities.</p>
+    </div>
+    <div class="part">
+      <img src="BST.jpg" alt="DBST">
+      <p>Welcome to the Department of DBST. Empowering data science and applied technology experts.</p>
+    </div>
+    <div class="part">
+      <button class="toggle-button">Toggle Details</button>
+      <div class="collapsible-content">
+        <p>Here are details about Faculty activities, including upcoming events and announcements. Click the button to expand or collapse this content.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
